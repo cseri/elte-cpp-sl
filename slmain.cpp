@@ -32,7 +32,7 @@ int main()
     yourMark = cli.front();
   // */
 
-  /* 3-as
+  /* 3-as */
   li.insert(8);
   li.remove(5);
   if (7 == cli.back())

@@ -31,6 +31,14 @@ public:
     return l.front();
   }
 
+  const T& back() const {
+    return l.back();
+  }
+
+  void remove(const T& e) {
+    l.remove(e);
+  }
+
 };
 
 #endif //SL_H_
