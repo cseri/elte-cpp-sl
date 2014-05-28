@@ -2,8 +2,9 @@
 #define SL_H_
 
 #include <list>
+#include <functional> //std::less
 
-template <typename T>
+template <typename T, typename Compare = std::less<T> >
 class SortedList
 {
   std::list<T> l;
@@ -14,11 +15,20 @@ public:
 
   typedef typename std::list<T>::const_iterator const_iterator;
 
+  SortedList() {}
+
+  template <typename ConstIterator>
+  SortedList(ConstIterator begin, ConstIterator end) :
+    l(begin, end)
+  {
+    l.sort(Compare());
+  }
+
   void insert(const T& e)
   {
     list_it it = l.begin();
     for (; it != l.end(); ++it) {
-      if (e < *it) break;
+      if (Compare()(e, *it)) break;
     }
 
     l.insert(it, e);

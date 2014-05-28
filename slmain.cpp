@@ -44,7 +44,7 @@ int main()
   yourMark += (14 == N);
   // */
 
-  /* 5-os
+  /* 5-os */
   std::deque<int> d;
   d.push_back(2);
   d.push_back(1);
