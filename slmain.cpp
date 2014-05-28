@@ -18,7 +18,7 @@ struct Compare: std::binary_function<int, int, bool>
 int main()
 {
   int yourMark = 1;
-  /* 2-es
+  /* 2-es */
   SortedList<int> li;
   SortedList<double> ls;
   ls.insert(5.6);
