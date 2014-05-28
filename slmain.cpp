@@ -39,7 +39,7 @@ int main()
     yourMark = cli.size();
   // */
 
-  /* 4-es
+  /* 4-es */
   const int N = std::accumulate(cli.begin(), cli.end(), 0);
   yourMark += (14 == N);
   // */

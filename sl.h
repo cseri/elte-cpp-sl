@@ -12,6 +12,8 @@ class SortedList
 
 public:
 
+  typedef typename std::list<T>::const_iterator const_iterator;
+
   void insert(const T& e)
   {
     list_it it = l.begin();
@@ -37,6 +39,14 @@ public:
 
   void remove(const T& e) {
     l.remove(e);
+  }
+
+  const_iterator begin() const {
+    return l.begin();
+  }
+
+  const_iterator end() const {
+    return l.end();
   }
 
 };
